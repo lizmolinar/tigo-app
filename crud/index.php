@@ -55,8 +55,8 @@
 </head>
 
         <h1>¿Que quieres hacer?</h1>
-        <a href="buscar.php" class="button">Buscar por Serial del Equipo</a>
-        <a href="agregar_usuario.php" class="button">Agregar Usuario Nuevo</a>
+        <a href="./busqueda_serial.php" class="button">Buscar por Serial del Equipo</a>
+        <a href="./crearusuario.php" class="button">Agregar Usuario Nuevo</a>
         <a href="crear_acta.php" class="button">Crear Acta</a>
 
     </div>

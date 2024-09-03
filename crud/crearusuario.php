@@ -12,12 +12,23 @@
 </head>
 
 <body>
+    <script>
+        function eliminar() {
+            var respuesta=confirm("estas seguro que deseas eliminar este usuario?");
+            return respuesta
+        }
+    </script>
     <h1 class="text-center p-3">Bienvenid@</h1>
+    <?php
+    include 'modelo/conexion.php';
+    include "controlador/eliminar_usuario.php";
+    ?>
+
     <div class="container-fluid row">
         <form class="col-3 p-3" method="POST">
             <h3 class="text-center text-secundary">Registro de Usuarios</h3>
             <?php
-            include 'modelo/conexion.php';
+            
             include 'controlador/registro_usuario.php';
             ?>
             <div class="mb-3">
@@ -160,7 +171,7 @@
                             <td><?php echo htmlspecialchars($datos->contrato); ?></td>
                             <td>
                                 <a href="modificarproducto.php?id=<?= $datos->ID ?>" class="btn btn-small btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a onclick="return eliminar()" href="crearusuario.php?id=<?= $datos->ID ?>" Class="btn btn-small btn-danger"></a>
+                                <a onclick="return eliminar()" href="crearusuario.php?id=<?= $datos->ID ?>" class="btn btn-small btn-danger"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php }
